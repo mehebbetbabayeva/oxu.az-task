@@ -46,19 +46,38 @@ header #top-header .top-header nav ul {
 header #top-header .top-header nav ul li {
   padding-left: 10px;
 }
-header #top-header .top-header nav ul li input {
-  background-color: #00193c;
-  background-image: url(../image/background-header.webp);
-  border: 1px solid gray;
-  outline: none;
-  width: 180px;
-  padding: 10px;
-  font-size: 18px;
-}
 header #top-header .top-header nav ul li a {
   color: #fff;
   font-size: 20px;
   text-decoration: underline;
+}
+header #top-header .top-header nav ul .inp-search {
+  display: flex;
+  border: 1px solid gray;
+  width: 180px;
+  margin-left: 10px;
+}
+header #top-header .top-header nav ul .inp-search input {
+  background-color: #00193c;
+  background-image: url(../image/background-header.webp);
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+  color: #fff;
+  width: 140px;
+  border: none;
+}
+header #top-header .top-header nav ul .inp-search .search {
+  border: none;
+  outline: none;
+  background-color: #00193c;
+  background-image: url(../image/background-header.webp);
+  width: 30px;
+}
+header #top-header .top-header nav ul .inp-search .search i {
+  color: #fff;
+  font-size: 20px;
+  padding-right: 5px;
 }
 header #bottom-header {
   width: 100%;
@@ -194,14 +213,18 @@ main #news-card .news-card {
   flex-wrap: wrap;
   flex-direction: row;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid blue;
 }
 main #news-card .news-card .card-item {
   width: 300px;
   height: 400px;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   position: relative;
+  margin: 10px 0;
+  border: 1px solid gray;
 }
 main #news-card .news-card .card-item .card-img {
   position: relative;
@@ -255,4 +278,26 @@ main #news-card .news-card .card-item .btn-group .btn-group-item {
   align-items: center;
   background-color: #c2bcbc;
   height: 50px;
+  color: #494747;
+}
+main #news-card .news-card .card-item .btn-group .btn-group-item span {
+  margin-left: 10px;
+}
+main #news-card .news-card .card-item .btn-group .like:hover {
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+}
+main #news-card .news-card .card-item .btn-group .dislike:hover {
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+main #news-card .news-card .card-item .btn-group .border {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+main #news-card .news-card .card-item:hover {
+  box-shadow: 1px 0px 14px 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
