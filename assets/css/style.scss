@@ -8,7 +8,6 @@
 .container{
     max-width: 70%;
     margin: 0 auto;
-    border: 1px solid red;
 }
 $font-color:#fff;
 @mixin flex-between {
@@ -119,16 +118,15 @@ header{
 // start main
 main{
     #news{
+        margin-top: 10px;
         width: 100%;
         .news{
             width: 100%;
             @include flex-between();
             height: 500px;
-            border: 1px solid blue;
             .left-card{
-                width: 69%;
+                width: 60%;
                 height: 100%;
-                border: 1px solid red;
                 background-image: url(../image/FotoJet\ -\ 2022-12-13T202015.475.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -171,6 +169,94 @@ main{
                     position: absolute;
                     bottom: 0;
                     left: 0;
+                }
+            }
+            .right-card{
+                width: 39%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .top-right-card{
+                    width: 100%;
+                    height: 50%;
+                    background-image: url(../image/FotoJet\ -\ 2022-12-13T212007.444.jpg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .bottom-right-card{
+                    width: 100%;
+                    height: 50%;
+                    background-image: url(../image/gfhgfhgfhgfhgf.jpg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    #news-card{
+        width: 100%;
+        .news-card{
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+            .card-item{
+                width: 300px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid red;
+                position: relative;
+                .card-img{
+                    position: relative;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                    .date{
+                        width: 60px;
+                        @include flex-center();
+                        flex-direction: column;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        color: $font-color;
+                        .month{
+                            width: 100%;
+                            background-color: #4d70d1;
+                            padding: 8px;
+                        }
+                        .time{
+                            background-color: #4dd163;
+                           width: 100%;
+                           padding: 5px;
+                        }
+                    }
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: blue;
+                    padding: 20px;
+                }
+                .btn-group{
+                    @include flex-center();
+                    width: 100%;
+                    border-top: 1px solid gray;
+                    height: 50px;
+                    position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    .btn-group-item{
+                        width: 33.3%;
+                        @include flex-center();
+                        background-color: #c2bcbc;
+                        height: 50px;
+            
+                    }
                 }
             }
         }
