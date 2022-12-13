@@ -6,6 +6,174 @@
     list-style-type: none;
 }
 .container{
-    max-width: 1170px;
+    max-width: 70%;
     margin: 0 auto;
+    border: 1px solid red;
 }
+$font-color:#fff;
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// start header
+header{
+    #top-header{
+     width: 100%;
+     background-color: #00193c;
+     background-image: url(../image/background-header.webp);
+     position: sticky;
+    .top-header{
+        width: 100%;
+        height: 50px;
+        @include flex-between;
+        .logo{
+            a{
+                font-size: 35px;
+                color: $font-color;
+                text-transform: uppercase;
+            }
+            a::after{
+                content: '';
+                background-image: url(../image/xb64.webp);
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                background-size: contain;
+            }
+        }
+         nav{
+            ul{
+                @include flex-center;
+                li{
+                   padding-left: 10px;
+                    input{
+                        background-color: #00193c;
+                        background-image: url(../image/background-header.webp);
+                        border: 1px solid gray;
+                        outline:none ;
+                        width: 180px;
+                        padding: 10px;
+                        font-size: 18px;
+                    }
+                    a{
+                      color: $font-color;
+                      font-size: 20px;
+                      text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+    #bottom-header{
+        width: 100%;
+        background-color: #222222;
+        .bottom-header{
+            width: 100%;
+            @include flex-between;
+            height: 50px;
+            nav {
+                ul{
+                    @include flex-center();
+                    li{
+                        padding: 0 8px;
+                        height: 50px;
+                        @include flex-center();
+                        a{
+                            color: $font-color;
+                            font-size: 20px;
+                            font-weight: bold;
+                        }  
+                    }
+                    .active{
+                        background-color: gray;
+                    }
+                    li:hover{
+                        background-color: gray;
+                    } 
+                }
+            }
+            button{
+                background-color: #222222;
+                color:$font-color;
+                font-size: 25px;
+                border: none;
+            }
+        }
+    }
+}
+//end header
+
+// start main
+main{
+    #news{
+        width: 100%;
+        .news{
+            width: 100%;
+            @include flex-between();
+            height: 500px;
+            border: 1px solid blue;
+            .left-card{
+                width: 69%;
+                height: 100%;
+                border: 1px solid red;
+                background-image: url(../image/FotoJet\ -\ 2022-12-13T202015.475.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                position: relative;
+                i{
+                    font-size: 60px;
+                    color: $font-color;
+                }
+                .left-icon{
+                    position: absolute;
+                    top: 45%;
+                    left: 3%;
+                }
+                .right-icon{
+                    position: absolute;
+                    top: 45%;
+                    right: 3%;
+                }
+                .date{
+                    width: 200px;
+                    height: 40px;
+                    background-color: #4d70d1;
+                    @include flex-around();
+                    color: $font-color;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                    bottom: 16%;
+                }
+                .title{
+                    width: 100%;
+                    background-color: #222222;
+                    height: 80px;
+                    @include flex-center();
+                    color: $font-color;
+                    font-size: 20px;
+                    padding-left: 15px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+// end main
