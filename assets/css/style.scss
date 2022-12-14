@@ -120,9 +120,12 @@ header{
                 }
                 .inp-search{
                     display: flex;
-                    border: 1px solid gray;
+                    
                     width: 180px;
                     margin-left: 10px;
+                    border-top: 1px solid gray;
+                    border-left: 1px solid gray;
+                    border-bottom: 1px solid gray;
                     input{
                         background-color: #00193c;
                         background-image: url(../image/background-header.webp);
@@ -132,16 +135,22 @@ header{
                         color: $font-color;
                         width: 140px;
                         border: none;
-                       
+                      
                     }
                     
                 }
                 .search{
+                    padding: 8.5px;
                     border: none;
                     outline: none;
                     background-color: #00193c;
                     background-image: url(../image/background-header.webp);
                     width: 30px;
+                    border-top: 1px solid gray;
+                    border-right: 1px solid gray;
+                    border-bottom: 1px solid gray;
+                    
+
                     i{
                         color: $font-color;
                         font-size: 20px;
@@ -399,6 +408,7 @@ main{
                     }
                     .search{
                         display: block ;
+                        border: none;
                     
                     .lang{
                         display: block;

@@ -94,9 +94,11 @@ header #top-header .top-header nav ul li a {
 }
 header #top-header .top-header nav ul .inp-search {
   display: flex;
-  border: 1px solid gray;
   width: 180px;
   margin-left: 10px;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 header #top-header .top-header nav ul .inp-search input {
   background-color: #00193c;
@@ -109,11 +111,15 @@ header #top-header .top-header nav ul .inp-search input {
   border: none;
 }
 header #top-header .top-header nav ul .search {
+  padding: 8.5px;
   border: none;
   outline: none;
   background-color: #00193c;
   background-image: url(../image/background-header.webp);
   width: 30px;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 header #top-header .top-header nav ul .search i {
   color: #fff;
@@ -367,6 +373,7 @@ main #news-card .news-card .card-item:hover {
   }
   header #top-header .top-header nav ul .search {
     display: block;
+    border: none;
   }
   header #top-header .top-header nav ul .search .lang {
     display: block;
