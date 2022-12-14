@@ -11,12 +11,42 @@
   margin: 0 auto;
 }
 
+header .btn-nav {
+  display: none;
+  background-color: #00193c;
+  background-image: url(../image/background-header.webp);
+  position: absolute;
+  left: 0;
+  bottom: 7%;
+  transition: 1.5s ease;
+  z-index: 7;
+  width: 250px;
+}
+header .btn-nav nav ul {
+  display: flex;
+  flex-direction: column;
+}
+header .btn-nav nav ul li {
+  padding: 0 8px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+  border-top: 2px solid gray;
+}
+header .btn-nav nav ul li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+header .btn-nav nav ul .active a {
+  color: gray;
+}
 header #top-header {
   width: 100%;
   background-color: #00193c;
   background-image: url(../image/background-header.webp);
-  position: -webkit-sticky;
-  position: sticky;
 }
 header #top-header .top-header {
   width: 100%;
@@ -24,6 +54,14 @@ header #top-header .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header #top-header .top-header .logo .logo-btn {
+  display: none;
+  background-color: #00193c;
+  background-image: url(../image/background-header.webp);
+  color: #fff;
+  font-size: 25px;
+  border: none;
 }
 header #top-header .top-header .logo a {
   font-size: 35px;
@@ -37,6 +75,9 @@ header #top-header .top-header .logo a::after {
   height: 32px;
   display: inline-block;
   background-size: contain;
+}
+header #top-header .top-header nav {
+  display: block;
 }
 header #top-header .top-header nav ul {
   display: flex;
@@ -67,14 +108,14 @@ header #top-header .top-header nav ul .inp-search input {
   width: 140px;
   border: none;
 }
-header #top-header .top-header nav ul .inp-search .search {
+header #top-header .top-header nav ul .search {
   border: none;
   outline: none;
   background-color: #00193c;
   background-image: url(../image/background-header.webp);
   width: 30px;
 }
-header #top-header .top-header nav ul .inp-search .search i {
+header #top-header .top-header nav ul .search i {
   color: #fff;
   font-size: 20px;
   padding-right: 5px;
@@ -82,6 +123,7 @@ header #top-header .top-header nav ul .inp-search .search i {
 header #bottom-header {
   width: 100%;
   background-color: #222222;
+  display: block;
 }
 header #bottom-header .bottom-header {
   width: 100%;
@@ -113,7 +155,7 @@ header #bottom-header .bottom-header nav ul .active {
 header #bottom-header .bottom-header nav ul li:hover {
   background-color: gray;
 }
-header #bottom-header .bottom-header button {
+header #bottom-header .bottom-header .btn {
   background-color: #222222;
   color: #fff;
   font-size: 25px;
@@ -215,7 +257,6 @@ main #news-card .news-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid blue;
 }
 main #news-card .news-card .card-item {
   width: 300px;
@@ -300,4 +341,73 @@ main #news-card .news-card .card-item .btn-group .border {
 main #news-card .news-card .card-item:hover {
   box-shadow: 1px 0px 14px 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
+}
+
+@media screen and (max-width: 397px) {
+  .container {
+    max-width: 90%;
+  }
+  header #top-header {
+    height: 80px;
+    position: relative;
+  }
+  header #top-header .top-header {
+    height: 80px;
+    align-items: center;
+  }
+  header #top-header .top-header .logo {
+    display: flex;
+  }
+  header #top-header .top-header .logo .logo-btn {
+    display: block;
+    margin-right: 10px;
+  }
+  header #top-header .top-header nav ul .nav-item {
+    display: none;
+  }
+  header #top-header .top-header nav ul .search {
+    display: block;
+  }
+  header #top-header .top-header nav ul .search .lang {
+    display: block;
+  }
+  header #bottom-header {
+    display: none;
+  }
+}
+@media screen and (max-width: 397px) {
+  main #news {
+    margin-top: 0;
+  }
+  main #news .container {
+    max-width: 100%;
+  }
+  main #news .container .news {
+    height: 300px;
+    display: block;
+  }
+  main #news .container .news .left-card {
+    width: 100%;
+    height: 300px;
+  }
+  main #news .container .news .left-card i {
+    display: none;
+  }
+  main #news .container .news .left-card .date {
+    background-color: rgba(24, 148, 160, 0.8);
+    bottom: 23%;
+  }
+  main #news .container .news .left-card .title {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 70px;
+  }
+  main #news .container .news .right-card {
+    display: none;
+  }
+  main #news-card .container {
+    width: 95%;
+  }
+  main #news-card .container .news-card .card-item {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
